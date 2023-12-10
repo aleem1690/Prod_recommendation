@@ -258,7 +258,7 @@ class ProdRecom:
                     2. Check & filter all {prod_name} fulfils the {prod_req}
                     3. Based on the reviews of filtered {prod_name}, and if it is fulfilling the needs identify the best {prod_name}
                     4. Under 15 sentences, justify your selection. try to relate it as close to the {prod_req}.
-                    5. Dont just list down the justification. Give verbose explanation
+                    5. Give an overview instead of listing down justifications
                     6. In 3-4 sentences explain why it is better than other filtered {prod_name}
 
                   detailed_review: {detailed_review}
