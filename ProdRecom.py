@@ -288,8 +288,8 @@ if __name__ == "__main__":
   product_needs_audio = None
 
   #setting whisper model
-  model = whisper.load_model("base")
-  r = sr.Recognizer()
+  #model = whisper.load_model("base")
+  #r = sr.Recognizer()
 
   
   if input_type == "Text":
