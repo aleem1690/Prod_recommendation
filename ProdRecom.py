@@ -272,10 +272,48 @@ class ProdRecom:
 
     return final_message
 
+# def main():
+    
+
 if __name__ == "__main__":
-  prod_sugg = ProdRecom()
-  search_request = '''
-I am looking to purchase a mobile phone in india from Rs 30000 to 35000. I am going to use it for calls, texts, watching movies & tv series.
-i want the photos to be of good quality. There should be enough space in phone. the phone screen should be of excellent quality. I dont want the phone to hang. The battery should atleast 1 whole day.
-'''
-  message = prod_sugg.final_product(search_request)
+  # Enthusiastic welcome message
+  st.title("Welcome to the Product Needs Portal!")
+  st.write("Hello there! 🌟 We're excited to hear about your product needs. You can share your thoughts with us through text or voice!")
+
+  # Radio button to select input type
+  input_type = st.radio("Select input type:", ["Text", "Voice"])
+
+  # Initialize variables
+  product_needs_text = ""
+  product_needs_audio = None
+
+  #setting whisper model
+  model = whisper.load_model("base")
+  r = sr.Recognizer()
+
+  
+  if input_type == "Text":
+      # Text box for sharing product needs
+      user_input_text = st.text_area("What do you want to buy today?:", "")
+  else:
+      # Voice recording option
+      st.write("We would love to hear from you!")
+      # audio_bytes = audio_recorder()
+      audio_bytes = audiorecorder("Click to record")
+
+  prod_recom = ProdRecom()
+
+  if st.button("Submit"):
+      if input_type == "Text" and user_input_text.strip() != "":
+        st.success("🚀 Thanks for sharing your thoughts through text!")
+        user_input = user_input_text
+      elif input_type == "Voice" and user_input_voice is not None:
+        csuccess("🎤 Thanks for sharing your thoughts through voice!")
+        user_input = user_input_voice
+      else:
+        st.warning("Oops! Please share your product needs, either through text or voice recording.")
+      
+      
+      message = prod_recom.final_product(search_request)
+
+      st.write(message)
