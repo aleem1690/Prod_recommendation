@@ -8,6 +8,8 @@ from bs4 import BeautifulSoup
 import re
 import streamlit as st
 
+openai.api_key = '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'
+
 class ProdRecom:
   def __init__(self):
     openai.api_key = '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'
