@@ -314,6 +314,6 @@ if __name__ == "__main__":
         st.warning("Oops! Please share your product needs, either through text or voice recording.")
       
       
-      message = prod_recom.final_product(search_request)
+      message = prod_recom.final_product(user_input)
 
       st.write(message)
