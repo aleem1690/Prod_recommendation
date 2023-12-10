@@ -8,11 +8,11 @@ from bs4 import BeautifulSoup
 import re
 import streamlit as st
 
-openai.api_key = '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'
+
 
 class ProdRecom:
   def __init__(self):
-    openai.api_key = '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'
+    openai.api_key = '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'
     self._no_of_links = 2
 
   def req_summary(self,search_request):
