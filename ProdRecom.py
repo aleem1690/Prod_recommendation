@@ -252,14 +252,15 @@ class ProdRecom:
     prod_req = summary_dict['product_needs']
 
     final_prod_prompt = f'''
-                    i am a customer who is looking to buy a {prod_name}. {prod_expert}.
-                    Now do exactly as instructed.
+                    {prod_expert}
+                    i am a customer who is looking to buy a {prod_name}. .
+                    i want you to
                     1. Go through all the reviews in detail as mentioned in detailed_review.
                     2. Check & filter all {prod_name} fulfils the {prod_req}
                     3. Based on the reviews of filtered {prod_name}, and if it is fulfilling the needs identify the best {prod_name}
-                    4. Under 15 sentences, justify your selection. try to relate it as close to the {prod_req}.
+                    4. Under 5 sentences, justify your selection. try to relate it as close to the {prod_req}.
                     5. Give an overview instead of listing down justifications
-                    6. In 3-4 sentences explain why it is better than other filtered {prod_name}
+                    6. In 2-3 sentences explain why it is better than other filtered {prod_name}
 
                   detailed_review: {detailed_review}
 
