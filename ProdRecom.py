@@ -12,7 +12,7 @@ import streamlit as st
 
 class ProdRecom:
   def __init__(self):
-    openai.api_key = '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'
+    openai.api_key = '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'
     self._no_of_links = 2
 
   def req_summary(self,search_request):
