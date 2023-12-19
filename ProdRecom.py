@@ -280,7 +280,7 @@ class ProdRecom:
 
 if __name__ == "__main__":
   # Enthusiastic welcome message
-  st.title("Welcome to One Solution Application!")
+  st.title("Welcome to One Solution App")
   st.write("Hello there! 🌟 We're excited to hear about your requirements. You can share your thoughts with us")
 
   # Radio button to select input type
