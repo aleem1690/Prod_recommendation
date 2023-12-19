@@ -280,8 +280,8 @@ class ProdRecom:
 
 if __name__ == "__main__":
   # Enthusiastic welcome message
-  st.title("Welcome to the Product Needs Portal!")
-  st.write("Hello there! 🌟 We're excited to hear about your product needs. You can share your thoughts with us through text or voice!")
+  st.title("Welcome to One Solution Application!")
+  st.write("Hello there! 🌟 We're excited to hear about your requirements. You can share your thoughts with us")
 
   # Radio button to select input type
   input_type = st.radio("Select input type:", ["Text", "Voice"])
